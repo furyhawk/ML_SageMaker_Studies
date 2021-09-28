@@ -12,6 +12,7 @@ import joblib
 # TODO: Import any additional libraries you need to define a model
 from sklearn import tree
 from sklearn.neural_network import MLPClassifier
+from sklearn import tree
 
 # Provided model load function
 
@@ -75,11 +76,12 @@ if __name__ == '__main__':
 
     # TODO: Define a model
     # nn MLP Classifier
-    model = MLPClassifier(hidden_layer_sizes=hidden_layer_sizes,
-                          activation=activation,
-                          solver=solver,
-                          random_state=random_state,
-                          max_iter=max_iter)
+    model = tree.DecisionTreeClassifier()
+    # MLPClassifier(hidden_layer_sizes=hidden_layer_sizes,
+    #                       activation=activation,
+    #                       solver=solver,
+    #                       random_state=random_state,
+    #                       max_iter=max_iter)
 
     # TODO: Train the model
     model = model.fit(train_x, train_y)

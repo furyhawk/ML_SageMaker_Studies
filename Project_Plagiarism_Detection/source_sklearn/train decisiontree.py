@@ -10,9 +10,9 @@ import pandas as pd
 import joblib
 
 # TODO: Import any additional libraries you need to define a model
-# from sklearn import tree
-# from sklearn.neural_network import MLPClassifier
-from sklearn.naive_bayes import ComplementNB
+from sklearn import tree
+from sklearn.neural_network import MLPClassifier
+from sklearn import tree
 
 # Provided model load function
 
@@ -54,7 +54,6 @@ if __name__ == '__main__':
     parser.add_argument('--solver', type=str, default='adam')
     parser.add_argument('--random_state', type=int, default=1)
     parser.add_argument('--max_iter', type=int, default=300)
-    parser.add_argument('--alpha', type=float, default=1.0)
 
     # args holds all passed-in arguments
     args = parser.parse_args()
@@ -74,11 +73,10 @@ if __name__ == '__main__':
     solver = args.solver
     random_state = args.random_state
     max_iter = args.max_iter
-    alpha = args.alpha
 
     # TODO: Define a model
     # nn MLP Classifier
-    model = ComplementNB(alpha=alpha)
+    model = tree.DecisionTreeClassifier()
     # MLPClassifier(hidden_layer_sizes=hidden_layer_sizes,
     #                       activation=activation,
     #                       solver=solver,

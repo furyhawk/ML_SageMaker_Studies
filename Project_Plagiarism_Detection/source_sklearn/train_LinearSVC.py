@@ -12,7 +12,7 @@ import joblib
 # TODO: Import any additional libraries you need to define a model
 # from sklearn import tree
 # from sklearn.neural_network import MLPClassifier
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import ComplementNB
 from sklearn import svm
 
 # Provided model load function
@@ -79,7 +79,7 @@ if __name__ == '__main__':
 
     # TODO: Define a model
     # nn MLP Classifier
-    model = svm.MultinomialNB()
+    model = svm.LinearSVC()
     # MLPClassifier(hidden_layer_sizes=hidden_layer_sizes,
     #                       activation=activation,
     #                       solver=solver,

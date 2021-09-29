@@ -13,7 +13,6 @@ import joblib
 # from sklearn import tree
 # from sklearn.neural_network import MLPClassifier
 from sklearn.naive_bayes import ComplementNB
-from sklearn import svm
 
 # Provided model load function
 
@@ -79,7 +78,7 @@ if __name__ == '__main__':
 
     # TODO: Define a model
     # nn MLP Classifier
-    model = svm.LinearSVC()
+    model = ComplementNB(alpha=alpha)
     # MLPClassifier(hidden_layer_sizes=hidden_layer_sizes,
     #                       activation=activation,
     #                       solver=solver,

@@ -79,7 +79,7 @@ if __name__ == '__main__':
 
     # TODO: Define a model
     # nn MLP Classifier
-    model = svm.MultinomialNB()
+    model = MultinomialNB()
     # MLPClassifier(hidden_layer_sizes=hidden_layer_sizes,
     #                       activation=activation,
     #                       solver=solver,
